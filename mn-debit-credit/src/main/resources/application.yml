@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: debitCredit
+datasources:
+  default:
+    url: jdbc:postgresql://${rds.hostname}/${rds.db.name}?stringtype=unspecified
+    driverClassName: org.postgresql.Driver
+    username: ${rds.username}
+    password: ${rds.password}
+    schema-generate: CREATE
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+jpa.default.properties.hibernate.hbm2ddl.auto: update
+
+rds:
+  hostname: localhost:5432
+  username: postgres
+  password: letmein
+  db:
+    name: mn_debit_credit

@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mn_debit_credit?stringtype=unspecified
+    username: postgres
+    password: letmein
+
+    initialization-mode: always
+
+customer:
+  count: 1000000
+  batch: 10000
